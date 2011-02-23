@@ -1,0 +1,13 @@
+<VirtualHost *:80>
+    ServerName $$$somesite.com$$$
+    ServerAdmin $$$admin@somesite.com$$$ 
+    DocumentRoot $$$/var/www/somesite/public/$$$
+    DirectoryIndex index.php
+    #ErrorLog logs/apache2/$$$somesite.com$$$-error_log 
+    #CustomLog logs/apache2/$$$somesite.com$$$-access_log common 
+
+    <Directory $$$/var/www/somesite/public$$$> 
+      AllowOverride All 
+      Allow from All 
+    </Directory> 
+</VirtualHost>
