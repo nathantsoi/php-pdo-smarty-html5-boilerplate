@@ -7,3 +7,5 @@ It comes complete with:
 Smarty (Templating Engine)
 PDO Singleton (Database Access)
 HTML5-boilerplate
+
+Just put your site specific code between the $$$'s and you're good to go.
