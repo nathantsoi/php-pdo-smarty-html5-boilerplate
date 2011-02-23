@@ -5,10 +5,6 @@ require_once('libs/Smarty-3.0.6/libs/Smarty.class.php');
 // Configure Timezone $$$ You may want to change this otherwise php will complain
 //date_default_timezone_set('America/Los_Angeles');
 
-// Setup Session ... $$$ Uncomment for auth
-//session_set_cookie_params(0 , '/', $cfg['SESSION-URL']);
-//session_start();
-
 // Load classes $$$ You may want to load some classes by hand
 include_once('classes/DB.php');
 function __autoload($className)
@@ -27,6 +23,10 @@ ini_set('arg_separator.output', '&amp');
 
 // fall back to using URL for session ID when cookies disabled
 ini_set('session.use_trans_sid', '1');
+
+// Setup Session ... $$$ Uncomment for auth
+//session_set_cookie_params(0 , '/', $cfg['SESSION-URL']);
+//session_start();
 
 // set up smarty template engine
 $template = new Smarty();

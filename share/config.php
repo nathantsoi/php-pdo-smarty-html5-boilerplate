@@ -15,6 +15,9 @@ $config['session_save_path'] = session_save_path();
 $config['request_url'] = implode('/', array_slice(explode('/', 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']), 0, -1)).'/';
 $config['media_url'] = $config['request_url'].'assets/';
 
+$config['BASE-URL'] = '$$$mysite.com$$$'; // URL to index
+$config['SESSION-URL'] = '.$$$mysite.com$$$'; // URL for session cookie on client
+
 // log file
 $config['logfile'] = $config['document_root'].'/../../logs/'.$config['app_name'].($config['debug'] ? '_debug' : 'stable').'.log';
 
@@ -29,7 +32,7 @@ $config['DB-HOST'] = 'localhost'; // DATABASE hostname or ip
 $config['DB-USER'] = '$$$DbUser$$$'; // DATABASE username
 $config['DB-PASS'] = '$$$DbPass$$$'; // DATABASE password
 $config['DB-NAME'] = '$$DbName$$$'; // DATABASE name on host
-$config['DB-DSN'] = "mysql:host=localhost;dbname=$config['DB-NAME']"; // PDO DSN http://www.php.net/manual/en/ref.pdo-mysql.php
+$config['DB-DSN'] = "mysql:host=localhost;dbname=".$config['DB-NAME']; // PDO DSN http://www.php.net/manual/en/ref.pdo-mysql.php
 
 // SSSSHHHHH
 $config['secret'] = '$$$SomeSecretsSauce$$$';
