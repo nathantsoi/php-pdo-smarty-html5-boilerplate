@@ -9,3 +9,10 @@ PDO Singleton (Database Access)
 HTML5-boilerplate
 
 Just put your site specific code between the $$$'s and you're good to go.
+
+pssst... run:
+git grep '\$\$\$'
+
+
+You'll probably also want to (it should fix the smarty cache errors):
+sudo chown -R apache wheel php-pdo-smarty-html5-boilerplate
