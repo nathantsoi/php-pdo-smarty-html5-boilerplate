@@ -9,8 +9,12 @@ $config['app_title'] = '$$$AppTitle$$$';
 // debug mode
 $config['debug'] = true;
 
-// Server-related
+// Directories
 $config['document_root'] = dirname(__FILE__).'/../public/';
+// Controllers directory
+$config['controllers_directory'] = dirname(__FILE__).'/controllers/';
+
+// Server-related
 $config['session_save_path'] = session_save_path();
 $config['request_url'] = implode('/', array_slice(explode('/', 'http://'.$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI']), 0, -1)).'/';
 $config['media_url'] = $config['request_url'].'assets/';
